@@ -71,16 +71,23 @@ public class Robot {
 	//Rotation
 	public void rotateRobot(int direction)
 	{
-		this.orientation = this.orientation + direction;
+		if(this.orientation == 0 && direction == -90) {
+			this.orientation = 270;
+		} else if (this.orientation == 270 && direction == 90) {
+			this.orientation = 0;
+		} else {
+			this.orientation = this.orientation + direction;
+		}
 	}
 	
 	//Distance from other Robot
-	public String distanceFromOther(Robot robot)
+	public double distanceFromOther(Robot robot)
 	{
-		int diffX = this.positionX - robot.positionX;
-		int diffY = this.positionY - robot.positionY;
+		double diffX = this.positionX - robot.positionX;
+		double diffY = this.positionY - robot.positionY;
+		double lineFormula = Math.sqrt((diffX * diffX) + (diffY * diffY));
 		
-		return "I am " + diffX + " away from X and " + diffY + " away from Y.";
+		return lineFormula;
 	}
 	
 	//ToString
@@ -90,9 +97,8 @@ public class Robot {
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Robot myRobot = new Robot("Alfred", -5, 10, 3, 180);
-		Robot yourRobot = new Robot("Jeeves", 11, -2, 5, 90);
-		myRobot.moveRobot(5);
+		Robot myRobot = new Robot("Alfred", 5, 5, 3, 180);
+		Robot yourRobot = new Robot("Jeeves", 10, -4, 5, 90);
 		System.out.println(myRobot);
 		System.out.println(myRobot.distanceFromOther(yourRobot));
 	}

@@ -86,7 +86,7 @@ public class Fraction {
 		int gcd = this.gcd();
 		
 		this.num = this.num / gcd;
-		this.denom = this.denom / gcd;		
+		this.denom = this.denom / gcd;
 	}
 	
 	//ToString
