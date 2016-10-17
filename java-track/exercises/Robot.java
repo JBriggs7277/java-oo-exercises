@@ -6,8 +6,8 @@ public class Robot {
 	//Name - String
 	private String name;
 	//Positions - int
-	private int positionX;
-	private int positionY;
+	protected int positionX;
+	protected int positionY;
 	//Speed - int
 	private int speed;
 	//Orientation - int 0, 90, 180, 270
@@ -95,10 +95,12 @@ public class Robot {
 	{
 		return "Name: " + this.name + " Position: (" + this.positionX + ", " + this.positionY + ") Speed: " + this.speed + " Orientation: " + this.orientation;
 	}
+	
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Robot myRobot = new Robot("Alfred", 5, 5, 3, 180);
-		Robot yourRobot = new Robot("Jeeves", 10, -4, 5, 90);
+		Robot myRobot = new Robot("Alfred", 10, 20, 3, 180);
+		Robot yourRobot = new Robot("Jeeves", -10, -12, 5, 90);
 		System.out.println(myRobot);
 		System.out.println(myRobot.distanceFromOther(yourRobot));
 	}
