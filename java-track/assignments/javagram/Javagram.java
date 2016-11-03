@@ -4,7 +4,6 @@ import javagram.filters.*;
 import java.util.ArrayList;
 
 import java.io.File;
-import java.util.Arrays;
 import java.util.Scanner;
 import java.util.InputMismatchException;
 
