@@ -3,7 +3,7 @@ package javagram.filters;
 import javagram.Picture;
 import java.awt.Color;
 
-public class BlueFilter {
+public class BlueFilter implements Filter{
 
 	public Picture process(Picture original) {
 		
@@ -29,5 +29,12 @@ public class BlueFilter {
 		
 		return processed;
 	}
+	
+	public String toString() 
+	{
+		return "Blue Filter: A filter that gives an entire image a blue tint.";
+	}
 
 }
+
+
