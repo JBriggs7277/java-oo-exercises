@@ -7,6 +7,8 @@ import java.io.File;
 import java.util.Scanner;
 import java.util.InputMismatchException;
 
+//comment 
+
 public class Javagram {
 	
 	private static ArrayList<Filter> filterList = new ArrayList<Filter>();
